@@ -1,0 +1,1 @@
+ImmutableMultiDict([('ticker', u'GOOG'), ('price option2', u'adj_open'), ('price option1', u'open')])

@@ -2,15 +2,31 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hello, World!</title>
+		<title>Stock price trend browser!</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div>
-  			<h1>Hello, World!</h1>
+  			<h1>Stock price trend browser!</h1>
             
+            <form id='stock_data_request_form' method='post' action='/index' >
+                
+            <p>
+            Stock Ticker Symbol: <input type='text' name='ticker', value = 'GOOG' />
+            </p>
+            
+            <input type="checkbox" name="price option1" value="open"> Opening price<br>
+            <input type="checkbox" name="price option2" value="adj_open"> Adjusted Opening price<br>
+            <input type="checkbox" name="price option3" value="close"> Closing price <br>
+            <input type="checkbox" name="price option4" value="adj_close"> Adjusted Closing price <br>
+            
+            
+            <input type="submit">
+            </form>
+
+
 		</div>
 	</body>
 </html>
