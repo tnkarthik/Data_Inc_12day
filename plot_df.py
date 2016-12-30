@@ -1,4 +1,4 @@
-def plot_df(df):
+def plot_df(df, ticker):
     
     from bokeh.charts import TimeSeries
     from bokeh.io import save, output_file
@@ -7,7 +7,7 @@ def plot_df(df):
     colnames = list(df.columns)
     colnames.remove('date')
     #colnames.remove('ticker')
-    
-    p = TimeSeries(df, x = 'date', y = colnames, color = colnames, dash = colnames, title = 'Stock Price plot' , ylabel = 'Stock Prices', legend = True)
+    p_title = 'Stock price plot for '+ ticker
+    p = TimeSeries(df, x = 'date', y = colnames, color = colnames, dash = colnames, title = p_title , ylabel = 'Stock Prices', legend = True)
     save(p)
     #return ('stock_price.html')

@@ -23,7 +23,7 @@ def index():
 
         df  = get_data( ticker = ticker, selected_cols = colnames)
         
-        plot_df(df)
+        plot_df(df, ticker)
         
         return render_template('stock_price.html')
 
