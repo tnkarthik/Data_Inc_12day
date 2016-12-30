@@ -16,7 +16,10 @@ def get_data(ticker='GOOG',date_end = date.today().strftime('%Y%m%d'),\
     r = requests.get('https://www.quandl.com/api/v3/datatables/WIKI/PRICES.json', params = quandl_params)
     
     ## Check if data query was successful
-    assert r.status_code == requests.codes.ok
+    try:
+        assert r.status_code == requests.codes.ok
+    except:
+        return pd.DataFrame()
 
     ## Parse the JSON data and store it in dictionary data. n_row and n_col are num of rows and columns of the final data frame
     r_text = json.loads(r.text)
