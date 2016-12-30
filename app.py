@@ -21,8 +21,8 @@ def index():
         
         colnames = [str(result[x]) for x in result.keys() if x != 'ticker']
         
-        #if ! colnames:
-        #    colnames = ['open','close']
+        if not colnames:
+            colnames = ['open','close']
 
         df  = get_data( ticker = ticker, selected_cols = colnames)
         
